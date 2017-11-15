@@ -9,11 +9,12 @@ html, body {
 body {
   margin: 0;
   padding: 0;
-  font-family: 'Helvetica Neue', Arial, Helvetica, sans-serif;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
 }
 
 h1, h2 {
   margin-top: 0;
+  font-family: 'Comfortaa', sans-serif;
 }
 
 #landing {
@@ -126,4 +127,214 @@ button {
 
 #about {
   padding: 2rem;
+}
+
+.next-course {
+  display: table;
+  width: 100%;
+}
+
+.next-course > .column {
+  display: table-cell;
+  width: 25%;
+  vertical-align: middle;
+}
+  
+@media (max-width: 768px) {
+  .next-course > .column {
+    display: block;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+}
+
+.next-course > .column > .icon-row {
+  display: table;
+}
+
+.next-course > .column > .icon-row > .icon-row-icon, .next-course > .column > .icon-row > .icon-row-content {
+  display: table-cell;
+  vertical-align: middle;
+}
+
+.next-course > .column > .icon-row > .icon-row-icon {
+  width: 3rem;
+  text-align: center;
+}
+
+.next-course > .column > .icon-row > .icon-row-content.-large {
+  font-size: 2rem;
+}
+
+.next-course > .column.-right {
+  text-align: right;
+}
+
+.next-course > .column.-twentytwo {
+  width: 22%;
+}
+
+@media (max-width: 768px) {
+  .next-course > .column.-twentytwo {
+    display: block;
+    width: 100%;
+  }
+}
+
+.next-course > .column.-forty {
+  width: 12%;
+}
+
+@media (max-width: 768px) {
+  .next-course > .column.-forty {
+    display: block;
+    width: 100%;
+  }
+}
+
+.next-course > .column > .icon-row > .icon-row-content {
+  padding: 0 2rem;
+}
+
+.next-course > .column > .icon-row > .icon-row-content.-right {
+  text-align: right;
+  padding-right: 0;
+}
+
+.next-course > .column > .icon-row > .icon-row-content.-fill {
+  width: 100%;
+}
+
+.next-course > .column > .icon-row > .icon-row-icon > .fa {
+  color: #7b6a7b;
+  font-size: 3rem;
+  position: relative;
+  top: 0.2rem;
+}
+
+.technologies {
+    margin-left: -0.75rem;
+    margin-bottom: 2.75rem;
+}
+
+.technologies > ul {
+  padding: 0;
+  margin: 0;
+  user-select: none;
+}
+
+.technologies > ul > li {
+  display: inline-block;
+  width: 4rem;
+  height: 3.3rem;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+#html5 {
+  background-image: url('images/logos/html5-compressor.svg');
+  width: 3.6rem;
+  background-size: 2.5rem;
+}
+
+#css3 {
+  background-image: url('images/logos/css3-compressor.svg');
+  width: 3.6rem;
+  background-size: 1.7rem;
+}
+
+#github {
+  background-image: url('images/logos/github-octocat.svg');
+  width: 3.6rem;
+  background-size: 3rem;
+  background-position: bottom;
+}
+
+#firebase {
+  background-image: url('images/logos/firebase.svg');
+  width: 3.6rem;
+  background-size: 2rem;
+}
+
+#redux {
+  background-image: url('images/logos/redux.svg');
+  width: 3.9rem;
+  background-size: 2.6rem;
+}
+
+#javascript {
+  background-image: url('images/logos/js-compressor.svg');
+  width: 4rem;
+  background-size: 2.5rem;
+}
+
+#bootstrap {
+  background-image: url('images/logos/bootstrap-compressor.svg');
+  width: 5rem;
+  background-size: 2.4rem;
+}
+
+#jquery {
+  background-image: url('images/logos/jquery-compressor.svg');
+  width: 7.8rem;
+  background-size: 6.7rem;
+  background-position: 0 1.1.375rem;
+}
+
+#node {
+    background-image: url('images/logos/nodejs-compressor.svg');
+    width: 5.2rem;
+    background-size: 3.7rem;
+}
+
+#npm {
+    background-image: url('images/logos/npm-compressor.svg');
+    width: 5.2rem;
+    background-size: 3.7rem;
+}
+
+#express {
+    background-image: url('images/logos/express-compressor.svg');
+    width: 6.1.375rem;
+    background-size: 4.6rem;
+}
+
+#mongo {
+    background-image: url('images/logos/mongodb-compressor.svg');
+    width: 7rem;
+    background-size: 5.3rem;
+}
+
+#react {
+    background-image: url('images/logos/react-compressor.svg');
+    width: 4rem;
+    background-size: 2.5rem;
+}
+
+#sass {
+    background-image: url('images/logos/sass-compressor.svg');
+    width: 4.7rem;
+    background-size: 3rem;
+}       
+
+.link-btn {
+  border: 0;
+  border-radius: 3px;
+  background-color: #4d96a5;
+  font-family: inherit;
+  color: #FFF;
+  text-decoration: none;
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 500;
+  font-size: 1.4rem;
+  padding: 0.75rem 1.25rem;
+  box-shadow: 0 3px 5px 0px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.5s ease-in-out;
+  outline: none;
+  cursor: pointer;
+}
+
+a {
+  color: #4e1047;
 }
