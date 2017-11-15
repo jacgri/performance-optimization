@@ -5,9 +5,134 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>MCRcodes</title>
-  <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Comfortaa|Montserrat:500">
-  <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
-  <link rel="stylesheet" href="style.css">
+  <style>
+  * {
+  box-sizing: border-box;
+  }
+
+  html, body {
+  height: 100%;
+  }
+
+  body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Source Sans Pro', Arial, Helvetica, sans-serif;
+  }
+ 
+  #landing {
+  background-color: #f3f1f3;
+  padding: 2rem;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: #4e1047;
+  }
+
+  #landing > h1 {
+  font-size: 2rem;
+  }
+
+  .logo {
+  width: 120px;
+  margin-bottom: -12px;
+  }
+
+  #header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+  #header > .hamburger > .layer {
+  width: 35px;
+  height: 5px;
+  margin-bottom: 5px;
+  background-color: #4e1047;
+  }
+
+  #header > .hamburger {
+  cursor: pointer;
+  }
+
+  #header > .hamburger > .layer:last-child {
+  margin: 0;
+  }
+
+  #menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: white;
+  visibility: hidden;
+  padding: 2rem;
+}
+
+  #menu > .close {
+  text-align: right;
+  }
+
+  #menu > .close > .cross {
+  cursor: pointer;
+  font-weight: bold;
+  }
+
+  #menu > ul {
+  margin: 0;
+  list-style-type: none;
+  padding: 0;
+  }
+
+  #menu > ul > li {
+  margin-bottom: 10px;
+  }
+
+  #menu > ul > li > a {
+  font-size: 2rem;
+  font-weight: bold;
+  color: #4e1047;
+  text-decoration: none;
+  }
+
+  #menu > ul > li > a:hover {
+  color: black;
+  }
+
+  h1, h2 {
+  margin-top: 0;
+  font-family: 'Comfortaa', sans-serif;
+  }
+  
+  label {
+  display: block;
+  margin-bottom: 10px;
+  }
+
+  input {
+  border: 1px solid #4e1047;
+  background-color: transparent;
+  color: #4e1047;
+  padding: 10px;
+  font-family: inherit;
+  border-radius: 3px;
+  font-size: 16px;
+  height: 48px;
+  }
+
+  button {
+  height: 48px;
+  padding: 0 10px;
+  background-color: #4e1047;
+  border: 0;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  font-size: 16px;
+  }
+  </style>
 </head>
 <body>
   <nav id="menu">
@@ -119,7 +244,21 @@
       </div>
     </div>
   </section>
-  <script src="js/nav.js"></script>
-  <script src="js/email.js"></script>
+  <script async src="js/nav.js"></script>
+  <script async src="js/email.js"></script>
+  <noscript id="deferred-css">
+      <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Source+Sans+Pro:400,600|Comfortaa|Montserrat:500">
+      <link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+      <link rel="stylesheet" href="style.css" id="stylesheet">
+  </noscript>
+  <script async>
+    window.addEventListener('load', event => {
+      const linkTagContainer = document.getElementById('deferred-css')// the no script block
+      const newLinkTagContainer = document.createElement('div') //a new block we will append to the DOM
+      newLinkTagContainer.innerHTML = linkTagContainer.textContent // set contents of new block to noscript blocks
+      document.body.appendChild(newLinkTagContainer) //append new container to body
+      linkTagContainer.parentElement.removeChild(linkTagContainer) //remove link tag from noscript block
+    })
+  </script>
 </body>
 </html>
